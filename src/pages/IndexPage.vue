@@ -6,6 +6,7 @@
       style="width: 200px; height: 200px"
     />
   </q-page>
+  <h1>vamos pra cima BRASIL</h1>
 </template>
 
 <script>
