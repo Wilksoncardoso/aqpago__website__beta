@@ -1,11 +1,11 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    />
-  </q-page>
+  <transition appear enter-active-class="scale" leave-active-class="scale">
+    <q-page class="flex flex-center">
+      <h1>home</h1>
+    </q-page>
+  </transition>
+
+  <h1>vamos pra cima BRASIL</h1>
   <br />
   <br />
   <br />
@@ -71,14 +71,8 @@
   <br />
   <br />
   <br />
-  <h1
-    enter-active-class="animated fadeIn"
-    leave-active-class="animated fadeOut"
-    id="ola"
-  >
-    vamos pra cima BRASIL
-  </h1>
-  <p>{{ $route.query.foo }}</p>
+  <p id="teste">{{ $route.query.foo }}</p>
+  <a @click="$router.replace('/#ola')">inicio</a>
 
   <!-- <p>{{ $q.platform }}</p> -->
   <!-- <p>{{ $q.version }}</p> -->
@@ -89,6 +83,6 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "IndexPage",
+  name: "HomePage",
 });
 </script>

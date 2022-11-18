@@ -1,7 +1,9 @@
 <template>
-  <q-item clickable tag="a" target="_blank" :href="link">
+  <q-item clickable tag="a" :to="{ path: link, hash: hash }">
     <q-item-section v-if="icon" avatar>
       <q-icon :name="icon" />
+      {{ hash }}
+      {{ link }}
     </q-item-section>
 
     <q-item-section>
@@ -29,7 +31,12 @@ export default defineComponent({
 
     link: {
       type: String,
-      default: "#",
+      default: "",
+    },
+
+    hash: {
+      type: String,
+      default: "",
     },
 
     icon: {
